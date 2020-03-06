@@ -58,7 +58,7 @@
 .btn-3d-1::before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   height: 0;
   width: 0;
   border: solid 6px transparent;
@@ -71,7 +71,7 @@
 .btn-3d-1::after {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   height: 0;
   width: 0;
   border: solid 6px transparent;
@@ -181,7 +181,7 @@
   padding: 20px 40px;
   font: 1.4rem;
   background: #00b3b4;
-  background-image: url("pattern.png");
+  background-image: url('pattern.png');
   background-size: 40px 40px;
   border: solid 1px #555;
   color: #fff;
@@ -215,15 +215,103 @@
   top: 30%;
   right: 0.9em;
   font-size: 1.2rem;
-  content: "»";
+  content: '»';
   transition: all ease 0.3s;
   opacity: 0;
 }
 .animated-button-2:hover {
   padding: 20px 60px 20px 20px;
 }
-
 .animated-button-2:hover::after {
   right: 1.8em;
   opacity: 1;
+}
+
+/* TOOGLE SWITCH BUTTONS */
+.toggle-1 {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+.toggle-1__input {
+  display: none;
+}
+.toggle-1__button {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2395a;
+  border: solid 1px #f2395a;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.toggle-1__button::before {
+  position: absolute;
+  top: 6px;
+  left: 40px;
+  content: 'off';
+  display: inline-block;
+  height: 20px;
+  padding: 0 3px;
+  background: #fff;
+  color: #f239ba;
+  transition: all 0.3s ease;
+}
+.toggle-1__input:checked + .toggle-1__button {
+  background: #00b3b4;
+  border: solid 1px #00b3b4;
+}
+.toggle-1__input:checked + .toggle-1__button::before {
+  left: 5px;
+  content: 'on';
+  color: #00b3b4;
+}
+
+.toggle-2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+.toggle-2__input {
+  display: none;
+}
+.toggle-2__button {
+  position: relative;
+  display: inline-block;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #aaa;
+  border: solid 1px #ccc;
+  padding: 5px 10px 5px 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.toggle-2__button::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  content: '';
+  transition: all 0.3s ease;
+  border-radius: 100%;
+}
+.toggle-2__input:checked + .toggle-2__button {
+  background: #00b3b4;
+  border-color: #00b3b4;
+  color: #fff;
+}
+.toggle-2__input:checked + .toggle-2__button::before {
+  background: #fff;
 }
